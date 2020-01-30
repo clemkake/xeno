@@ -24,9 +24,31 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/plugins/switchery/switchery.min.css",
+              "src/assets/plugins/apexcharts/apexcharts.css",
+              "src/assets/plugins/slick/slick.css",
+              "src/assets/plugins/slick/slick-theme.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/icons.css",
+              "src/assets/css/flag-icon.min.css",
+              "src/assets/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/modernizr.min.js",
+              "src/assets/js/detect.js",
+              "src/assets/js/jquery.slimscroll.js",
+              "src/assets/js/vertical-menu.js",
+              "src/assets/plugins/switchery/switchery.min.js",
+              "src/assets/plugins/apexcharts/apexcharts.min.js",
+              "src/assets/plugins/apexcharts/irregular-data-series.js",    
+              "src/assets/plugins/slick/slick.min.js",
+              "src/assets/js/custom/custom-dashboard.js",
+              "src/assets/js/core.js"
+            ]
           },
           "configurations": {
             "production": {
