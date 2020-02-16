@@ -46,8 +46,7 @@
               "src/assets/plugins/apexcharts/apexcharts.min.js",
               "src/assets/plugins/apexcharts/irregular-data-series.js",    
               "src/assets/plugins/slick/slick.min.js",
-              "src/assets/js/custom/custom-dashboard.js",
-              "src/assets/js/core.js"
+              "src/assets/js/custom/custom-dashboard.js"
             ]
           },
           "configurations": {
