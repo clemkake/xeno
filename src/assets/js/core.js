@@ -7,7 +7,7 @@
 "use strict";
 $(document).ready(function() {
     /* -- Menu js -- */
-    console.log('retrouv')
+    // console.log('retrouv')
     $.sidebarMenu($('.vertical-menu'));
     $(function() {
         for (var a = window.location, abc = $(".vertical-menu a").filter(function() {
