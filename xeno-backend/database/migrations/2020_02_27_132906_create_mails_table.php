@@ -15,8 +15,15 @@ class CreateMailsTable extends Migration
     {
         Schema::create('mails', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->string('subject');
+            $table->text('body');
+            $table->bigInteger('sender')->unsigned();
+            $table->string('cc');
+
             $table->timestamps();
         });
+        
     }
 
     /**

@@ -15,8 +15,16 @@ class CreateAuditsTable extends Migration
     {
         Schema::create('audits', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->string('audit_type');
+            $table->bigInteger('contact')->unsigned();
+            $table->string('audit_name');
+            $table->string('audit_summary');
+
             $table->timestamps();
         });
+
+
     }
 
     /**

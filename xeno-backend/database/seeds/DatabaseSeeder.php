@@ -14,3 +14,14 @@ class DatabaseSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
     }
 }
+
+class UserTableSeeder extends Seeder {
+
+    public function run()
+    {
+        DB::table('users')->delete();
+
+        // User::create(['email' => 'foo@bar.com']);
+    }
+
+}
