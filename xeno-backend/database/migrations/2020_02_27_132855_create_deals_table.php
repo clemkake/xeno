@@ -15,11 +15,8 @@ class CreateDealsTable extends Migration
     {
         Schema::create('deals', function (Blueprint $table) {
             $table->bigIncrements('id');
-
             $table->string('title');
-            $table->string('deal_status');
-            $table->string('deal_type');
-
+            $table->bigInteger('company')->unsigned();
             $table->timestamps();
         });
     }

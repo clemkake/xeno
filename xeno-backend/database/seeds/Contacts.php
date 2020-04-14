@@ -12,5 +12,6 @@ class Contacts extends Seeder
     public function run()
     {
         //
+        
     }
 }

@@ -16,7 +16,11 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            
+            $table->string('logo')->default('https://via.placeholder.com/48');
+            $table->string('name')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
+            $table->integer('number_of_employees')->nullable();
 
             $table->timestamps();
         });

@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class tasks extends Model
 {
-    //
+    private $fillable = [
+        'name'
+    ];
 }

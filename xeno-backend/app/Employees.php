@@ -4,11 +4,14 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Employees extends Authenticatable
+
+class Employees extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable;
+    use HasApiTokens,Notifiable,SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +19,26 @@ class Employees extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 
+        'email',
+        'password',
+        'last_name',
+        'nickname',
+        'title',
+        'image',
+        'manager_id',
+        'about_me',
+        'work_phone',
+        'company',
+        'active', 
+        'activation_token',
+        'mobile_phone',
+        'fax',
+        'street_address',
+        'city',
+        'state_province',
+        'postal_code',
+        'country'
     ];
 
     /**
@@ -25,7 +47,7 @@ class Employees extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','activation_token'
     ];
 
     /**

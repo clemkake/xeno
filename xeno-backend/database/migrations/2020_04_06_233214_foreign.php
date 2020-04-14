@@ -15,6 +15,7 @@ class Foreign extends Migration
     {
         Schema::table('employees', function($table) {
             $table->foreign('title')->references('id')->on('job_functions');
+            $table->foreign('company')->references('id')->on('companies');
         });
 
         Schema::table('mails', function($table) {
@@ -23,7 +24,12 @@ class Foreign extends Migration
 
         Schema::table('contacts', function($table) {
             $table->foreign('deal')->references('id')->on('deals');
+            $table->foreign('company')->references('id')->on('companies');
             $table->foreign('sales_rep')->references('id')->on('employees');
+        });
+
+        Schema::table('deals', function($table) {
+            $table->foreign('company')->references('id')->on('companies');
         });
 
         Schema::table('forms', function($table) {

@@ -7,25 +7,7 @@ use Illuminate\Http\Request;
 
 class UsersGroupController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +17,9 @@ class UsersGroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usersgroup = new UsersGroup;
+        $usersgroup->name = $request->name;
+        $usersgroup->save();
     }
 
     /**
@@ -45,17 +29,6 @@ class UsersGroupController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(UsersGroup $usersGroup)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\UsersGroup  $usersGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(UsersGroup $usersGroup)
     {
         //
     }

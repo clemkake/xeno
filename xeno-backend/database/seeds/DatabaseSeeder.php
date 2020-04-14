@@ -11,7 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call(Company::class); //
+        $this->call(Deals::class); //
+        $this->call(userTypeSeeder::class); //
+        $this->call(JobFunctionsSeeder::class);
+        $this->call(UsersSeeder::class);
     }
 }
 
@@ -19,7 +23,7 @@ class UserTableSeeder extends Seeder {
 
     public function run()
     {
-        DB::table('users')->delete();
+        // DB::table('users')->delete();
 
         // User::create(['email' => 'foo@bar.com']);
     }

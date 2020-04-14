@@ -20,25 +20,23 @@ class CreateContactsTable extends Migration
             $table->string('last_name');
             $table->string('nickname');
             $table->string('title');
-            $table->string('company');
 
             $table->string('lead_referral_source');
-            $table->string('date_of_initial_contact');
+            $table->date('date_of_initial_contact')->nullable();
             $table->string('Industry');
             $table->string('website');
-            $table->bigInteger('deal')->unsigned();
-            
-
+            $table->bigInteger('deal')->unsigned()->default(1);
+            $table->bigInteger('company')->unsigned();
             
             $table->string('status');
-            $table->string('linkedin_profile');
-            $table->string('background_info');
+            $table->string('linkedin_profile')->nullable();
+            $table->string('background_info')->nullable();
             $table->bigInteger('sales_rep')->unsigned();
-            $table->string('ratings');
-            $table->string('project_type');
-            $table->string('project_description');
-            $table->string('proposal_due_date');
-            $table->string('budget');
+            $table->string('ratings')->nullable();
+            $table->string('project_type')->nullable();
+            $table->string('project_description')->nullable();
+            $table->date('proposal_due_date')->nullable();
+            $table->string('budget')->nullable();
 
             $table->string('image')->nullable();
             $table->string('manager_id')->nullable();
@@ -52,7 +50,6 @@ class CreateContactsTable extends Migration
             $table->string('postal_code')->nullable();
             $table->string('country')->nullable();
             
-
             $table->timestamps();
         });
 

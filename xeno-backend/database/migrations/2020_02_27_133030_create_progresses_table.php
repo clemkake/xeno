@@ -15,6 +15,7 @@ class CreateProgressesTable extends Migration
     {
         Schema::create('progresses', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('status');
             $table->timestamps();
         });
     }

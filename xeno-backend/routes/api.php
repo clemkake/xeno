@@ -13,6 +13,24 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Auth::routes(['verify' => true]);
+
+
+
+    Route::middleware('auth:api')->any('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    Route::post('users/', [
+        'uses'=>'EmployeesController@show'
+    ])->middleware('auth:api');
+
+    Route::post('/users/register/', [
+        'uses'=>'EmployeesController@store'
+    ]);
+
+    Route::get('/users/validation/{token}', [
+        'uses'=>'EmployeesController@confirmation'
+    ]);
+
+
