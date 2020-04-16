@@ -10,6 +10,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { AdminModule } from './admin/admin.module';
 import { EmpModule } from './employee/emp.module';
 import { CommonModule } from '@angular/common';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,9 @@ import { CommonModule } from '@angular/common';
     AdminModule,
     EmpModule,
     AuthModule,
-    AppRoutingModule,
-    // AuthRoutingModule,
-    // AdminRoutingModule,
-    // EmpRoutingModule
-    
+    AppRoutingModule,   
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

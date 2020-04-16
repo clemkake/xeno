@@ -32,7 +32,7 @@
   }
   
   .status-head:before {
-    border-left: 26px solid #263a5b;
+    /* border-left: 26px solid #263a5b; */
     border-right: 26px solid transparent;
     border-top: 26px solid transparent;
     border-bottom: 26px solid transparent;

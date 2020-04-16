@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SingupConfirmationComponent } from './singup-confirmation/singup-confirmation.component';
 
 
 
@@ -13,11 +15,13 @@ import { LoginComponent } from './login.component';
     SigninComponent,
     RegisterComponent,
     ForgotpasswordComponent,
-    LoginComponent
+    LoginComponent,
+    SingupConfirmationComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    HttpClientModule
   ],
   exports: [
     SigninComponent,

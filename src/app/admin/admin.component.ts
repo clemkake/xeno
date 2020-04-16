@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var $: any;
 
@@ -11,11 +12,18 @@ export class AdminComponent implements OnInit {
 
 loadAPI: Promise<any>;
 
-constructor() {        
+constructor(
+    private _http: Router
+) {        
     this.loadAPI = new Promise((resolve) => {
         this.loadScript();
         resolve(true);
     });
+}
+
+logout(){
+    $.cookie('XE_AUTHUSER', '', {expires: -1, path: '/'});
+    this._http.navigate(['/login']);
 }
 
 public loadScript() {        

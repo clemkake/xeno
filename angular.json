@@ -31,11 +31,14 @@
               "src/assets/plugins/slick/slick-theme.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/icons.css",
+              "src/assets/css/bootoast.css",
               "src/assets/css/flag-icon.min.css",
               "src/assets/css/style.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
+              "src/assets/js/bootoast.js",
+              "src/assets/js/jquery.cookie.js",
               "src/assets/js/popper.min.js",
               "src/assets/js/bootstrap.min.js",
               "src/assets/js/modernizr.min.js",

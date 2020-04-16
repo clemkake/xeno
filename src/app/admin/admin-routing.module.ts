@@ -11,21 +11,23 @@ import { GoalsComponent } from './goals/goals.component';
 import { ProgressComponent } from './progress/progress.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReportsComponent } from './reports/reports.component';
+import { AuthGuard } from '../auth.guard';
 
 
 const routes: Routes = [
-  {path:'', component: AdminComponent, children:[
-    {path: '', redirectTo: 'admin/dashboard', pathMatch: 'full' },
-    { path: 'admin/dashboard', component: DashboardComponent },
-    { path: 'admin/deals', component: DealsComponent },
-    { path: 'admin/mails', component: MailsComponent },
-    { path: 'admin/activities', component: ActivitiesComponent },
-    { path: 'admin/contacts', component: ContactsComponent },
-    { path: 'admin/tasks', component: TasksComponent },
-    { path: 'admin/goals', component: GoalsComponent },
-    { path: 'admin/progress', component: ProgressComponent },
-    { path: 'admin/forms', component: FormsComponent },
-    { path: 'admin/reports', component: ReportsComponent },
+  {path:'', component: AdminComponent, canActivateChild: [AuthGuard],
+    children:[
+    {path: '', redirectTo: 'main/dashboard', pathMatch: 'full' },
+    { path: 'main/dashboard', component: DashboardComponent },
+    { path: 'main/deals', component: DealsComponent },
+    { path: 'main/mails', component: MailsComponent },
+    { path: 'main/activities', component: ActivitiesComponent },
+    { path: 'main/contacts', component: ContactsComponent },
+    { path: 'main/tasks', component: TasksComponent },
+    { path: 'main/goals', component: GoalsComponent },
+    { path: 'main/progress', component: ProgressComponent },
+    { path: 'main/forms', component: FormsComponent },
+    { path: 'main/reports', component: ReportsComponent },
   ]}
 ];
 
