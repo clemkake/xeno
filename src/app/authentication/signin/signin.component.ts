@@ -21,7 +21,7 @@ export class SigninComponent implements OnInit {
     var body = {
       grant_type:'password',
       client_id:2,
-      client_secret:'pPeljxa9CWzjtWejvMKBooq0V1DOFnoDniym5npP',
+      client_secret:'y0O7AhNTNGHGDpu21fradLJBVcoIP1U60shzOjnE',
       username: $('#username').val(),
       scope:'*',
       password: $('#password').val()

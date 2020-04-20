@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\contacts;
+use App\Contacts;
 use Illuminate\Http\Request;
 
 class ContactsController extends Controller
@@ -17,15 +17,6 @@ class ContactsController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -41,24 +32,16 @@ class ContactsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\contacts  $contacts
+     * @param  \App\Contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function show(contacts $contacts)
+    public function show(Contacts $contacts)
     {
-        //
+        $contacts = Contacts::where('company', '=', auth()->user()->company)->get();
+        return response()->json($contacts,201); 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\contacts  $contacts
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(contacts $contacts)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
@@ -67,7 +50,7 @@ class ContactsController extends Controller
      * @param  \App\contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, contacts $contacts)
+    public function update(Request $request, Contacts $contacts)
     {
         //
     }
@@ -75,10 +58,10 @@ class ContactsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\contacts  $contacts
+     * @param  \App\Contacts  $contacts
      * @return \Illuminate\Http\Response
      */
-    public function destroy(contacts $contacts)
+    public function destroy(Contacts $contacts)
     {
         //
     }

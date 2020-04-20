@@ -49,7 +49,19 @@
               "src/assets/plugins/apexcharts/apexcharts.min.js",
               "src/assets/plugins/apexcharts/irregular-data-series.js",    
               "src/assets/plugins/slick/slick.min.js",
-              "src/assets/js/custom/custom-dashboard.js"
+              "src/assets/js/custom/custom-dashboard.js",
+              "src/assets/plugins/datatables/jquery.dataTables.min.js",
+              "src/assets/plugins/datatables/dataTables.bootstrap4.min.js",
+              "src/assets/plugins/datatables/dataTables.buttons.min.js",
+              "src/assets/plugins/datatables/buttons.bootstrap4.min.js",
+              "src/assets/plugins/datatables/jszip.min.js",
+              "src/assets/plugins/datatables/pdfmake.min.js",
+              "src/assets/plugins/datatables/vfs_fonts.js",
+              "src/assets/plugins/datatables/buttons.html5.min.js",
+              "src/assets/plugins/datatables/buttons.print.min.js",
+              "src/assets/plugins/datatables/buttons.colVis.min.js",
+              "src/assets/plugins/datatables/dataTables.responsive.min.js",
+              "src/assets/plugins/datatables/responsive.bootstrap4.min.js"
             ]
           },
           "configurations": {

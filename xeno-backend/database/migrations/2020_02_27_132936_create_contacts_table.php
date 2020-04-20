@@ -34,15 +34,16 @@ class CreateContactsTable extends Migration
             $table->bigInteger('sales_rep')->unsigned();
             $table->string('ratings')->nullable();
             $table->string('project_type')->nullable();
-            $table->string('project_description')->nullable();
             $table->date('proposal_due_date')->nullable();
             $table->string('budget')->nullable();
+            $table->boolean('is_lead')->false(true);
 
             $table->string('image')->nullable();
             $table->string('manager_id')->nullable();
             $table->text('about_me')->nullable();
+            $table->string('email');
             $table->bigInteger('work_phone')->nullable();
-            $table->bigInteger('mobile_phone')->unique();
+            $table->bigInteger('mobile_phone');
             $table->bigInteger('fax')->nullable();
             $table->string('street_address')->nullable();
             $table->string('city')->nullable();

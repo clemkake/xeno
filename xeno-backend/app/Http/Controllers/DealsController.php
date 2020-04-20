@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\deals;
+use App\Contacts;
 use Illuminate\Http\Request;
 
 class DealsController extends Controller
@@ -46,7 +48,24 @@ class DealsController extends Controller
      */
     public function show(deals $deals)
     {
-        //
+        $deals = deals::where('company', '=', auth()->user()->company)->get();
+        return response()->json($deals,201); 
+    }
+
+        /**
+     * Display the specified resource.
+     *
+     * @param  \App\deals  $deals
+     * @return \Illuminate\Http\Response
+     */
+    public function showDealsContact(deals $deals)
+    {
+        $dealsContact = DB::table('contacts')
+        ->join('deals', 'contacts.deal', '=', 'deals.id')
+        ->select('contacts.*', 'deals.title as deals_name')
+        ->get();
+        
+        return response()->json($dealsContact,201); 
     }
 
     /**

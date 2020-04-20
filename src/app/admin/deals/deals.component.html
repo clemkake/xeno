@@ -19,29 +19,34 @@
             <div class="contentbar">                
                 <!-- Start row -->
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-lg-2" *ngFor="let item of DealsType">
                         <div class="card">
                             <div class="card-header bg-dark status-head mb-2">
-                                <span class="font-weight-bold">Status</span>
+                                <span class="font-weight-bold">{{item.title}}</span>
                             </div>
-                            <div class="card-body p-2 bg-light rounded-sm">
-                                <div class="dd" id="nestable">
-                                    <div class="row head-title">
-                                        <div class="col-lg-1">
-                                            <img class="rounded-circle" width="25" src="https://ui-avatars.com/api/?name=John+Doe" alt="">
+                            <ng-container *ngFor="let subItem of Deals">
+                                <ng-container *ngIf="subItem.deal == item.id">
+                                    <div class="card-body  p-2 mb-1 bg-light rounded-sm text-truncate">
+                                        <div class="dd" id="nestable">
+                                            <div class="row head-title">
+                                                <div class="col-lg-1">
+                                                    <img class="rounded-circle" width="25" src="https://ui-avatars.com/api/?name=John+Doe" alt="">
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <span class="lead-title text-uppercase text-dark font-weight-bold" data-toggle="tooltip" data-placement="right" [title]="subItem.last_name">
+                                                        {{subItem.last_name}}
+                                                    </span>
+                                                </div>
+                                                
+                                            </div>
+                                            <small class="ml-4 font-weight-bold">{{subItem.budget}}</small>
                                         </div>
-                                        <div class="col-lg-9">
-                                            <span class="lead-title text-truncate text-lowercase">
-                                                Accenture
-                                            </span>
-                                        </div>
-                                        
                                     </div>
-                                    <small class="ml-2 font-weight-bold">$20000</small>
-                                </div>
-                            </div>
+                                </ng-container>
+                            </ng-container>
+
                         </div>
-                    </div>
+                    </div>  
                 </div>
                 <!-- End row -->
             </div>
